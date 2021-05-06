@@ -28,7 +28,6 @@ namespace Catalog.Api.Repositories
             var deleteResult = await _context.Prodacts.DeleteOneAsync(filter);
 
             return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
-
         }
 
         public async Task<Product> GetProduct(string id)
